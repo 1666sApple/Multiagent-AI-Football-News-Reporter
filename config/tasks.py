@@ -1,16 +1,17 @@
 import os
 from dotenv import load_dotenv
+from crewai import Task
+from tool.tools import serpertool
+from config.agents import news_fetcher, editor, analyzer, compiler
 
 # Load environment variables from .env file
 load_dotenv()
 
-from tool.tools import serpertool
-from crewai import Task
-from config.agents import news_fetcher, editor, analyzer, compiler
-
+# Define tasks using CrewAI Task class
 fetch_task = Task(
     description=(
-        "Find the top European football news stories from the last 24 hours. The current time is {current_time}."
+        "Find the top European football news stories from the last 24 hours. "
+        "The current time is {current_time}."
     ),
     expected_output=(
         "A list of the top European football news story titles, URLs, and a brief summary for each story from the past 24 hours.\n"
@@ -49,8 +50,8 @@ edit_newsletter_task = Task(
         "Make sure the newsletter is engaging, well-structured, and free of errors."
     ),
     expected_output=(
-        "An edited newsletter that is engaging, well-structured, and free of errors. "
-            ),
+        "An edited newsletter that is engaging, well-structured, and free of errors."
+    ),
     tools=[serpertool],
     agent=editor,
 )

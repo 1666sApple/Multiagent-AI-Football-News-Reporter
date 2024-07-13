@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from crewai_tools import SerperDevTool
 
 # Load environment variables from .env file
 dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
@@ -11,6 +12,5 @@ if 'SERPER_API_KEY' in os.environ:
 else:
     print("SERPER_API_KEY environment variable is not set.")
 
-from crewai_tools import SerperDevTool
-
+# Initialize SerperDevTool from crewai_tools module
 serpertool = SerperDevTool()

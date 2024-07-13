@@ -1,19 +1,21 @@
 import os
 from dotenv import load_dotenv
+from langchain_google_genai import ChatGoogleGenerativeAI
+from crewai import Agent
 
 # Load environment variables from .env file
 dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
 load_dotenv(dotenv_path)
 
-from tool.tools import serpertool
-from langchain_google_genai import ChatGoogleGenerativeAI
-from crewai import Agent
+# Initialize Google Generative AI model
+llm = ChatGoogleGenerativeAI(
+    model="gemini-1.5-flash",
+    verbose=True,
+    temperature=0.7,
+    google_api_key=os.getenv("GOOGLE_API_KEY")
+)
 
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash",
-                             verbose=True,
-                             temperature=0.7,
-                             google_api_key=os.getenv("GOOGLE_API_KEY"))
-
+# Define agents using CrewAI Agent class
 editor = Agent(
     role="Newsletter Editor",
     goal="Take charge of and manage the whole editing process for the European Football Newsletter, making sure that every issue upholds the greatest standards of editorial excellence and journalistic integrity while engrossing readers with perceptive commentary and the most recent football news.",
