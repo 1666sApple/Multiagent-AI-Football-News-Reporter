@@ -1,11 +1,13 @@
-from crewai import Agent
-
 import os
 from dotenv import load_dotenv
-load_dotenv()
+
+# Load environment variables from .env file
+dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')  # Adjust the path if .env is not in the parent directory
+load_dotenv(dotenv_path)
+
 
 from langchain_google_genai import ChatGoogleGenerativeAI
-from src.tool.tools import serpertool
+from tool.tools import serpertool
 
 llm = ChatGoogleGenerativeAI(model = "gemini-1.5-flash",
                              verbose=True,
