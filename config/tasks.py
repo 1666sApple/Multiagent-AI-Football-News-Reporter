@@ -18,6 +18,7 @@ fetch_task = Task(
     ),
     tools=[serpertool],
     agent=news_fetcher,
+    max_duration=300,
 )
 
 analyze_news_task = Task(
@@ -30,6 +31,7 @@ analyze_news_task = Task(
     ),
     tools=[serpertool],
     agent=analyzer,
+    max_duration=300,
 )
 
 compile_newsletter_task = Task(
@@ -42,6 +44,7 @@ compile_newsletter_task = Task(
     ),
     tools=[serpertool],
     agent=compiler,
+    max_duration=300,
 )
 
 edit_newsletter_task = Task(
@@ -54,4 +57,5 @@ edit_newsletter_task = Task(
     ),
     tools=[serpertool],
     agent=editor,
+    max_duration=300,
 )
