@@ -13,4 +13,4 @@ else:
     print("SERPER_API_KEY environment variable is not set.")
 
 # Initialize SerperDevTool from crewai_tools module
-serpertool = SerperDevTool()
+serpertool = SerperDevTool(timeout=60)
