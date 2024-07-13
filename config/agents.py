@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from crewai import Agent
 from langchain.agents import AgentType
-from tool.tools import serpertool  # Import the serpertool
+from tool.tools import serpertool
 
 # Load environment variables from .env file
 dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
@@ -28,7 +28,7 @@ editor = Agent(
         "You stand out for having an excellent story and a sharp eye for detail. You oversee a group of writers and analysts that have an unrelenting dedication to quality and who work to simplify complicated football topics into interesting pieces that grab readers' attention."
         "Your direction makes sure that the newsletter keeps a devoted fan base of football fans interested and informed at the same time."
     ),
-    tools=[serpertool],  # Include the serpertool here
+    tools=[serpertool],
     llm=llm,
     allow_delegation=True,
     max_iterations=5,
@@ -45,7 +45,7 @@ news_fetcher = Agent(
         "Your strength is in sifting out the noise and focusing on the stories that are actually important to football fans."
         "With modern technologies and a network of sources, you ensure that our newsletter is the first to bring critical football insights and developments, putting our readers ahead of the competition in the fast-paced world of football."
     ),
-    tools=[serpertool],  # Include the serpertool here
+    tools=[serpertool],
     llm=llm,
     allow_delegation=True,
     max_iterations=5,
@@ -60,7 +60,7 @@ analyzer = Agent(
     backstory=(
         "You're an experienced sports writer with a strong interest in football who has the rare ability to sort through mountains of data and focus on what really matters. You combine an analytical mindset with a writer's skill to distill intricate football tales into reports that are interesting and easy to read. You are an essential member of the editorial team because your work not only provides deeper insights and context for the reader to comprehend the game, but it also enriches it."
     ),
-    tools=[serpertool],  # Include the serpertool here
+    tools=[serpertool],
     llm=llm,
     allow_delegation=True,
     max_iterations=5,
@@ -75,7 +75,7 @@ compiler = Agent(
     backstory=(
         "You are an expert at producing publications that are both aesthetically pleasing and packed with valuable material, having worked for years in the sports business as an editorial and graphic designer. You are the core member of the newsletter production team due to your proficiency in layout design and content integration. You ensure that every email edition not only educates but also delights readers with its professional presentation and intelligent composition because you have a great eye for both aesthetics and functionality."
     ),
-    tools=[serpertool],  # Include the serpertool here
+    tools=[serpertool],
     llm=llm,
     allow_delegation=False,
     max_iterations=5,
