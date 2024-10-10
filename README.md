@@ -16,7 +16,6 @@ This project is an AI-driven application designed to fetch, analyze, compile, an
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/1666sApple/Multiagent-AI-Football-News-Reporter.git
     cd Multiagent-AI-Football-News-Reporter
     ```
 

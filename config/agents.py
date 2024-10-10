@@ -9,6 +9,12 @@ from tool.tools import serpertool
 dotenv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
 load_dotenv(dotenv_path)
 
+
+if 'GOOGLE_API_KEY' in os.environ:
+    os.environ['GOOGLE_API_KEY'] = os.environ.get('GOOGLE_API_KEY')
+else:
+    print("GOOGLE_API_KEY environment variable is not set.")
+
 # Initialize Google Generative AI model
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash",
