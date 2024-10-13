@@ -84,8 +84,13 @@ root/
 This project is licensed under the GNU General Public License v3.0. See the LICENSE file for details.
 
 ## Acknowledgements
-- Special thanks to the developers of the Serper API for providing the news-fetching capabilities.
-- Gratitude to the open-source community for their invaluable contributions and support.
+- Special thanks to the developers of the **Serper API** for providing the news-fetching capabilities that power this application.
+- Gratitude to the **python-dotenv** library for enabling easy management of environment variables.
+- Appreciation for **crewai** and **crewai_tools** for their contributions to the project, enhancing the overall functionality.
+- Thanks to the **Langchain** and **langchain_google_genai** libraries for streamlining the integration of language models in the application.
+- Recognition of the **Langchain community** for their support and resources, helping to advance the project.
+- Thanks to the open-source community for their invaluable contributions, resources, and support that made this project possible.
+- Appreciation to football enthusiasts for inspiring the creation of a platform dedicated to delivering the latest news in an engaging format.
 
 ## Contributing
 
