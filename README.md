@@ -4,6 +4,12 @@
 
 This project is an AI-driven application designed to fetch, analyze, compile, and edit the latest European football news into a structured and engaging newsletter. It leverages multiple agents, each with a specific role, to automate the entire process from news gathering to newsletter creation.
 
+## Key Features
+- **Automated News Gathering:** Efficiently fetch the latest European football news using multiple agents.
+- **Multi-Agent Architecture:** Specialized agents for different tasks ensure optimal performance and organization.
+- **Analysis and Compilation:** Analyze and compile news articles into a structured and engaging newsletter format.
+- **Easy Setup:** Quick installation process with a straightforward configuration.
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -73,10 +79,13 @@ root/
     - tools.py: Defines the serpertool used for fetching news.
 - main.py: The main entry point of the application.
 
-## License
 
+## License
 This project is licensed under the GNU General Public License v3.0. See the LICENSE file for details.
 
+## Acknowledgements
+- Special thanks to the developers of the Serper API for providing the news-fetching capabilities.
+- Gratitude to the open-source community for their invaluable contributions and support.
 
 ## Contributing
 
